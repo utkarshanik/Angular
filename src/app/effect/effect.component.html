@@ -1,0 +1,10 @@
+<h1>{{username()}}</h1>
+<h2>{{count()}}</h2>
+
+<button (click)="count.set(count()+1)">Update</button>
+
+
+@if(display)
+{
+  <h1 style="background-color: green;">I will display at 2</h1>
+}

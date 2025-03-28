@@ -1,0 +1,18 @@
+<h1>getsetevent-task3 works!</h1>
+<h2>Your Name is {{name}}</h2>
+
+<input type="text" value="{{name}}" (input)="getname($event)" placeholder="Enter Your Name">
+<br> <br>
+
+<button (click)="showname()">Get Value</button>
+<button (click)="setname()">Set Value</button>
+<br>
+<h2>Your Name is {{disname}}</h2>
+<hr>
+<input type="text" value="{{email}}" placeholder="Enter Email" #emailField>
+<br>
+<h2>Your Email is => {{email}}</h2>
+<button (click)="getemail(emailField.value)">Get Email</button>
+<br>
+<br>
+<button (click)="setemail()">Set Email</button>

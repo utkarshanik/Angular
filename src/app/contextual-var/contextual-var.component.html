@@ -1,0 +1,18 @@
+<p>contextual-var works!</p>
+
+@for(use of users; track use;
+  let i=$index;
+  let ev=$even;
+  let od=$odd
+)
+{
+  <!-- <h3>{{i+1}}  {{use}}</h3> -->
+  @if(od)
+  {
+    <h3 style="background-color: rgb(210, 233, 233);">{{i+1}}  {{use}}</h3>
+  }
+  @else
+  {
+    <h3 style="background-color: rgb(129, 138, 138);">{{i+1}}  {{use}}</h3>
+  }
+}

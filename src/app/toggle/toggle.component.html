@@ -1,0 +1,25 @@
+<h2>If else </h2>
+
+<button (click)="hide()">Hide</button>
+<button style="margin: 5px;" (click)="show()">Show</button>
+<button (click)="toggle()">Toggle</button>
+
+@if(display)
+{
+  <div style="width: 150px; height: 150px; background-color: green;">
+  </div>
+}
+<hr>
+
+<button (click)="togglediv ()">{{display2?'Show Blue':'Show Yellow'}}</button>
+
+@if(display2)
+{
+  <div style="width: 150px; height: 150px; background-color: rgb(184, 211, 32);">
+  </div>
+}
+@else
+{
+  <div style="width: 150px; height: 150px; background-color: rgb(92, 190, 235);">
+  </div>
+}
