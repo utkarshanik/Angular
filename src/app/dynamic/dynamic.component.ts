@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './dynamic.component.css'
 })
 export class DynamicComponent {
-
+zoom=true;
+a="10px";
+b="100px";
+bg="green";
+tog()
+{
+  this.zoom= !this.zoom;
+}
 }

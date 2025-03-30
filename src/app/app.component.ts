@@ -16,10 +16,11 @@ import { ContextualVarComponent } from './contextual-var/contextual-var.componen
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
+import { DirectiveComponent } from './directive/directive.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,LoginComponent,SignupComponent,ProfileComponnet,Task1Component,EventTask2Component,GetseteventTask3Component,ToggleComponent,Toggle2Component,SwitchComponent,SignalsComponent,ComputedSignalComponent,EffectComponent,ContextualVarComponent,TwowaybindingComponent,TodolistComponent,DynamicComponent],
+  imports: [RouterOutlet,LoginComponent,SignupComponent,ProfileComponnet,Task1Component,EventTask2Component,GetseteventTask3Component,ToggleComponent,Toggle2Component,SwitchComponent,SignalsComponent,ComputedSignalComponent,EffectComponent,ContextualVarComponent,TwowaybindingComponent,TodolistComponent,DynamicComponent,DirectiveComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
