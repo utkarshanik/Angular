@@ -1,0 +1,39 @@
+<p>templateform works with Valiation!</p>
+
+<div class="text-center">
+
+    <form #userform ="ngForm" (ngSubmit)="adduser(userform.value)">
+        
+        <input #name="ngModel" type="text" required name="name" id="" placeholder="Name" ngModel>
+        <span class="text-danger" *ngIf="name.invalid && name.touched">*Required</span>
+        <br> <br>
+        <input  #pass="ngModel" minlength="5" required type="password" name="pass" placeholder="Passoword" ngModel >
+        <span class="text-danger" *ngIf="pass.invalid && pass.touched">*Please Have valid Password</span>
+        <br> <br>
+        <input  #email="ngModel" minlength="5" email required type="email" name="email" placeholder="email" ngModel >
+        <span class="text-danger" *ngIf="email.invalid && email.touched">*Please Give Email</span>
+        <br> <br>
+
+        <select #gender="ngModel" required name="gender" id="" ngModel>
+            <option value=""><Select> Gender</Select></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <span class="text-danger" *ngIf="gender.invalid && gender.touched">*Please Give Gender</span>
+
+        <br><br>
+        <input type="range" name="range" min="10" max="20"
+        id="" ngModel>
+
+     <br><br>
+     <button [disabled]="userform.invalid">Add user</button>
+    </form>
+
+   <h1 class="text-success"> Your deatilas are </h1>
+    <h1>{{userdata.name}}</h1>
+    <h1>{{userdata.pass}}</h1>
+    <h1>{{userdata.gender}}</h1>
+    <h1>{{userdata.range}}</h1>
+    
+    
+</div>

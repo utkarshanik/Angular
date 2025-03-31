@@ -21,16 +21,37 @@ import { RoutingComponent } from './routing/routing.component';
 import { HeaderComponent } from './header/header.component';
 import { Page404Component } from './page404/page404.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { TemplateformComponent } from './templateform/templateform.component';
+import { ParrentTochildComponent } from './parrent-tochild/parrent-tochild.component';
+import { ReusecompoComponent } from './reusecompo/reusecompo.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,RouterLink,LoginComponent,SignupComponent,ProfileComponnet,Task1Component,EventTask2Component,GetseteventTask3Component,ToggleComponent,Toggle2Component,SwitchComponent,SignalsComponent,ComputedSignalComponent,EffectComponent,ContextualVarComponent,TwowaybindingComponent,TodolistComponent
-    ,DynamicComponent,DirectiveComponent,RoutingComponent,HeaderComponent,Page404Component,ReactiveformComponent],
+    ,DynamicComponent,DirectiveComponent,RoutingComponent,HeaderComponent,Page404Component,
+    ReactiveformComponent,TemplateformComponent,ParrentTochildComponent,ReusecompoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 
 export class AppComponent {
+  
+  // paremt to child username
+  username="bruce"
+  // Child to parrent
+  users:undefined|string[];
+  childHandle(user:string[])
+  {
+      console.log(user);
+      this.users=user;
+  }
+
+
+  onchange(name:string)
+  {
+      this.username=name
+  }
+
   title = 'Utkarsha';  // properties of class.....
   x=10;
   // x:number="10";

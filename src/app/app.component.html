@@ -59,5 +59,24 @@
 
 <!-- <app-header></app-header>
 <router-outlet/>  -->
-<!-- ---------task 18 Reactive Forms ------>
-<app-reactiveform></app-reactiveform>
+<!-- ---------task 18 Reactive Forms + Validation ------>
+<!-- <app-reactiveform></app-reactiveform> -->
+<!-- ---------task 19 Template Forms and validaton ------>
+<!-- <app-templateform></app-templateform> -->
+ 
+<!-- ---------task 19 Template Forms and validaton ------>
+<!-- <app-parrent-tochild user={{username}}></app-parrent-tochild> -->
+<!-- <app-parrent-tochild [user]="username" city="Nagar"></app-parrent-tochild>
+<select #selecteduser (change)="onchange(selecteduser.value)" name=""  id="" class="m-2">
+  <option value="sam">sam</option>
+  <option value="dam">dam</option>
+  <option value="gham">gham</option>
+  <option value="dham">dham</option>
+</select> -->
+
+<app-reusecompo (getuser)="childHandle($event)" ></app-reusecompo>
+@for(user of users;track user)
+{
+  <h1>{{user}}</h1>
+}
+
