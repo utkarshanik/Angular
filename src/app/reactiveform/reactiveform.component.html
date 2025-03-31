@@ -8,3 +8,20 @@
     <button type="button" (click)="display()">submit</button>
 </form>
 
+<h1>Form Grouping.....</h1>
+
+<form [formGroup]="formFrp" (ngSubmit)="onSubmit()"  class="m-4">
+
+    <input type="text" formControlName="name2">
+    <span *ngIf="name2?.hasError('required')"> Name*</span>
+    <span class="text-danger" *ngIf="name2?.invalid &&(name2?.dirty || name2?.touched)">Provide Valid Name</span>
+    <br>
+    <input type="text" formControlName="pass2" > 
+    <span *ngIf="pass2?.hasError('required')"> Pass*</span>
+    <span class="text-danger" *ngIf="pass2?.invalid &&(pass2?.dirty || pass2?.touched)">Provide Valid Password</span><br>
+    <input type="email" formControlName="email2" > 
+    <span *ngIf="email2?.hasError('required')"> Email*</span>
+    <span class="text-danger" *ngIf="email2?.invalid &&(email2?.dirty || email2?.touched)">Provide Valid Email</span>
+    <br>
+    <button >submit</button>
+</form>
