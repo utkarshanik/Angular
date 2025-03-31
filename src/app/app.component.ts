@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponnet } from './profile/profile.component';
@@ -17,10 +17,15 @@ import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component'
 import { TodolistComponent } from './todolist/todolist.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { RoutingComponent } from './routing/routing.component';
+import { HeaderComponent } from './header/header.component';
+import { Page404Component } from './page404/page404.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,LoginComponent,SignupComponent,ProfileComponnet,Task1Component,EventTask2Component,GetseteventTask3Component,ToggleComponent,Toggle2Component,SwitchComponent,SignalsComponent,ComputedSignalComponent,EffectComponent,ContextualVarComponent,TwowaybindingComponent,TodolistComponent,DynamicComponent,DirectiveComponent],
+  imports: [RouterOutlet,RouterLink,LoginComponent,SignupComponent,ProfileComponnet,Task1Component,EventTask2Component,GetseteventTask3Component,ToggleComponent,Toggle2Component,SwitchComponent,SignalsComponent,ComputedSignalComponent,EffectComponent,ContextualVarComponent,TwowaybindingComponent,TodolistComponent
+    ,DynamicComponent,DirectiveComponent,RoutingComponent,HeaderComponent,Page404Component,ReactiveformComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

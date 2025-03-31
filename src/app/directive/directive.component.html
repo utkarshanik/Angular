@@ -1,10 +1,38 @@
-<p s>directive works!</p>
+<div class="p-5 ">
+    
+    <p>directive works!</p>
+    <ul class="d-flex">
+        <li style="list-style-type: none;" *ngFor="let i of stud"> <h3 class="m-2">{{i}}</h3> </li>
+    </ul>
+    
+    <h1 class="text-success">Array of Object => ngFor</h1>
+    <ul class="m-2 d-flex justify-content-between flex-column align-items-center">
+        <li class="m-2 d-flex justify-content-between " style="list-style-type: none;" *ngFor="let i of studdata"><h3>{{i.name}}  {{i.age}}  {{i.email}}</h3> </li>
+    </ul>
+    
+    <!-- ------------------------------------------------------------------>
+    <h1 class="text-success">nfIf</h1>
+    <div>
+        <h3 *ngIf="h else elseBlock">Hide me </h3>
+        <button class="btn-dark bg-primary text-light" (click)="hide()">{{h?"Hide Me":"Show Me"}} </button>
+    </div>
+    <ng-template #elseBlock>
+        <h3 class="text-danger">Hidden !!! </h3>
+    </ng-template>
+<!-- ------------------------------------------------------------------>
+    <h1 class="text-success">ngSwitch</h1>
+    <button (click)="change('black')">Black</button>
+    <button (click)="change('red')">Red</button>
+    <button (click)="change('green')">Green</button>
+    <button (click)="change('seco')">Secod</button>
+    
+    <div [ngSwitch]="color">
+        <h1 *ngSwitchCase="'black'" class="bg-black text-light" >BLACK </h1>
+        <h1 *ngSwitchCase="'red'" class="bg-danger text-light" >RED </h1>
+        <h1 *ngSwitchCase="'green'" class="bg-success text-light" >GRREN </h1>
+        <h1 *ngSwitchCase="'seco'" class="bg-secondary " >SECONDARY </h1>
+        <h1 *ngSwitchDefault class="bg-light text-black " >default Color</h1>
+    </div>
 
-<ul>
-    <li style="list-style-type: none;" *ngFor="let i of stud"><h1>{{i}}</h1> </li>
-</ul>
 
-<h1 class="text-success">Array of Objetc => ngforeach</h1>
-<ul>
-    <li class="m-2 d-flex " style="list-style-type: none;" *ngFor="let i of studdata"><h1>{{i.name}}  {{i.age}}  {{i.email}}</h1> </li>
-</ul>
+</div>

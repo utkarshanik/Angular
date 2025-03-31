@@ -1,1 +1,13 @@
 <h1 style="color: red;">signup works!</h1>
+<h3>{{user}}</h3>
+
+<h1 class="mt-2"> Dynamic routing is here</h1>
+
+<ul>
+@for(stu of stud; track stu.id)
+{
+        <li>
+            <a routerLink="user/{{stu.id}}/{{stu.name}}/{{stu.age}}/{{stu.email}}">{{stu.name}}</a>
+            </li>
+        }
+    </ul>
