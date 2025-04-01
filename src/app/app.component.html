@@ -64,7 +64,7 @@
 <!-- ---------task 19 Template Forms and validaton ------>
 <!-- <app-templateform></app-templateform> -->
  
-<!-- ---------task 19 Template Forms and validaton ------>
+<!-- ---------task-20 pareent to child ------>
 <!-- <app-parrent-tochild user={{username}}></app-parrent-tochild> -->
 <!-- <app-parrent-tochild [user]="username" city="Nagar"></app-parrent-tochild>
 <select #selecteduser (change)="onchange(selecteduser.value)" name=""  id="" class="m-2">
@@ -74,9 +74,13 @@
   <option value="dham">dham</option>
 </select> -->
 
-<app-reusecompo (getuser)="childHandle($event)" ></app-reusecompo>
+<!-- ---------task 21  child to parent ------>
+<!-- <app-reusecompo (getuser)="childHandle($event)" ></app-reusecompo>
 @for(user of users;track user)
 {
   <h1>{{user}}</h1>
-}
+} -->
 
+
+<!-- ---------task 22 Custom Pipe ------>
+<app-compopipe></app-compopipe>

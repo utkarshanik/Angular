@@ -24,12 +24,13 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { ParrentTochildComponent } from './parrent-tochild/parrent-tochild.component';
 import { ReusecompoComponent } from './reusecompo/reusecompo.component';
+import { CompopipeComponent } from './compopipe/compopipe.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,RouterLink,LoginComponent,SignupComponent,ProfileComponnet,Task1Component,EventTask2Component,GetseteventTask3Component,ToggleComponent,Toggle2Component,SwitchComponent,SignalsComponent,ComputedSignalComponent,EffectComponent,ContextualVarComponent,TwowaybindingComponent,TodolistComponent
     ,DynamicComponent,DirectiveComponent,RoutingComponent,HeaderComponent,Page404Component,
-    ReactiveformComponent,TemplateformComponent,ParrentTochildComponent,ReusecompoComponent],
+    ReactiveformComponent,TemplateformComponent,ParrentTochildComponent,ReusecompoComponent,CompopipeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
